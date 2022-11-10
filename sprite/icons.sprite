@@ -1,0 +1,24 @@
+{
+   "style_name": "icons",
+   "images": [
+      "../images/footer1.png",
+      "../images/footer2.png",
+      "../images/ic1.png",
+      "../images/ic2.png",
+      "../images/ic3.png",
+      "../images/ic4.png",
+      "../images/ic5.png",
+      "../images/ic6.png",
+      "../images/leftbtn.png",
+      "../images/rightbtn.png"
+   ],
+   "orientation": "vertical",
+   "padding": 5,
+   "custom_styles": {
+      "display": "inline-block"
+   },
+   "stylesheet": "css",
+   "path_prefix": "",
+   "output": "png",
+   "enable_cache_busting": true
+}

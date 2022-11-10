@@ -1,0 +1,575 @@
+@font-face {
+    font-family: "PingFangSCRegular";
+    src: url(../fonts/PingFangSCRegular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.ttf?t=1656819260540') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family:"PingFangSCRegular"; 
+    min-width: 1236px;
+}
+/* 不设min-width 窗口缩小后 超出窗口部分 直接不显示 */
+.site-head {
+    height: 150px;
+    /* min-width: 1152px; */
+}
+
+.site-head .topbar {
+    height: 32px;
+    background-color: #2A2A2A;
+    line-height: 32px;
+    /* width: 100%;通过实验发现 百分百和不设 是一个作用 可能是因为默认铺满当前窗口 */
+}
+
+.site-head .topbar .center-wrap {
+    /* width: 1152px; base里已设定 */
+    height: 32px;
+}
+
+.site-head .topbar a {
+    color: #FFFFFF;
+}
+
+.site-head .topbar nav {
+    float: left;
+}
+
+.site-head .topbar nav > ul > li {
+    float: left;
+    margin-right: 18px;
+    font-size: 12px;
+}
+
+.site-head .topbar nav > ul > li.have-menu {
+    padding-right: 12px;    /*此处设为padding与上面margin才合理*/
+    position: relative;
+}
+
+.site-head .topbar nav > ul > li.have-menu .arrow {
+    width: 12px;
+    height: 12px;
+    /* background-color: orange; */
+    position: absolute;
+    top: 9px;
+}
+
+.site-head .topbar nav > ul > li.have-menu .arrow:hover {
+    transform: rotate(180deg);
+    transition: transform .2s linear 0s;
+}
+
+.site-head .topbar nav > ul > li.have-menu .arrow b {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    top: 2.5px;
+    right: 3px;
+    transform: rotate(45deg);
+}
+
+.site-head .topbar nav > ul > li.have-menu .arrow i {
+    width: 6px;
+    height: 6px;
+    background-color: #2A2A2A;
+    position: absolute;
+    top: 0.5px;
+    right: 3px;
+    transform: rotate(45deg);
+}
+/* 此处箭头可以用sprit,图片，或者before来做，上面的方法顺便为了练习代码 */
+
+.site-head .topbar nav > ul > li.have-menu .subMenu {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+    top: 30px;
+    left: 0;
+    padding: 8px;
+    line-height: 20px;
+    display: none;
+    z-index: 999;
+}
+
+.site-head .topbar nav > ul > li.have-menu .mallMenu {
+    width: 66px;
+    /* height: 168px; */
+}
+
+.site-head .topbar nav > ul > li.have-menu .hotelMenu {
+    width: 54px;
+}
+
+.site-head .topbar nav > ul > li.have-menu .sqMenu {
+    width: 111px;
+}
+
+.site-head .topbar nav > ul > li.have-menu:hover .subMenu{
+    display: block;
+}
+
+.site-head .topbar nav > ul > li.have-menu .subMenu li:hover {
+    background-color: #20BD9A;
+}
+
+.site-head .topbar nav > ul > li.have-menu .subMenu a {
+    font-size: 12px;
+    color: #1C1F21;
+    /* line-height: 12px; */
+}
+
+.site-head nav.mainNav {
+    height: 40px;
+    background-color: #20BD9A;
+}
+
+.site-head nav.mainNav > ul.center-wrap {
+    height: 40px;
+    /* width: 1152px;
+    margin: 0 auto;  */
+}
+
+.site-head nav.mainNav > ul > li {
+    float: left;
+    margin-right: 18px;
+}
+
+.site-head nav.mainNav > ul > li > a {
+    color: #FFFFFF;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.site-head nav.mainNav > ul > li.subMenu {
+    padding-right: 16px;
+    position: relative;
+}
+
+.site-head nav.mainNav > ul > li.subMenu::after {
+    content: '';
+    border: 4px solid transparent;
+    border-top-color: #FFFFFF;
+    border-bottom: none;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    transition: transform .2s linear 0s ;
+}
+
+.site-head nav.mainNav > ul > li.subMenu:hover::after {
+    transform: rotate(180deg);
+}
+
+.site-head nav.mainNav > ul > li.subMenu .menuSub {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+    top: 35px;
+    left: 0;
+    padding: 8px;
+    line-height: 20px;
+    display: none;
+    z-index: 999; 
+    /* width: 150px; */
+}
+
+.site-head nav.mainNav > ul > li.subMenu  .freeGo {
+    width: 150px;
+}
+
+.site-head nav.mainNav > ul > li.subMenu .groupTour {
+    width: 106px;
+}
+
+.site-head nav.mainNav > ul > li.subMenu .localTour {
+    width: 172px;
+}
+
+.site-head nav.mainNav > ul > li.subMenu .in-depth-tourism {
+    width: 118px;
+}
+
+.site-head nav.mainNav > ul > li.subMenu:hover .menuSub {
+    display: block;
+}
+
+.site-head nav.mainNav > ul > li.subMenu .menuSub a {
+    font-size: 12px;
+    color: #1C1F21;
+    /* line-height: 12px; */
+}
+
+.site-head nav.mainNav > ul > li.subMenu .menuSub a:hover {
+    background-color: #20BD9A;
+}
+
+.site-head .head-cont {
+    height: 36px;
+    padding: 21px 0;
+}
+
+.site-head .head-cont .center-wrap h1 {
+    width: 120px;
+    height: 36px;
+    font-size: 24px;
+    color: #20BD9A;
+    /* text-align: justify; */
+    line-height: 36px;
+    float: left;
+}
+
+.site-head .head-cont .center-wrap .serch-box {
+    width: 405px;
+    height: 30px;
+    margin-left: 20px;
+    float: left;  
+    padding-top: 3px;
+}
+
+.site-head .head-cont .center-wrap .serch-box input {
+    width: 361px;
+    height: 28px;
+    border: 1px solid #20BD9A;
+    border-radius: 4px 0 0 4px;
+    padding-left: 10px;
+    outline: none;
+    float: left;
+}
+
+.site-head .head-cont .center-wrap .serch-box a {
+    background-color: #20BD9A;
+    width: 32px;
+    height: 30px;
+    float: left;
+    /* display: inline-block; */
+    border-radius: 0 4px 4px 0;
+}
+
+
+.bannerSec {
+    position: relative;
+}
+
+.bannerSec .banner1 {
+    width: 100%;
+    min-width: 1152px;
+    vertical-align: middle;
+}
+
+.bannerSec .center-wrap {
+    height: 100%;
+    /* background-color: orange; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -576px;
+}
+
+.bannerSec .center-wrap .leftbtn {
+    background-image: url(/sprite/icons.sprite.png);
+    width: 32px;
+	height: 44px;
+	background-position: -5px -309px;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    left: -42px;
+}
+
+.bannerSec .center-wrap .rightbtn {
+    background-image: url(/sprite/icons.sprite.png);
+    width: 32px;
+	height: 44px;
+	background-position: -5px -358px;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    right: -42px;
+}
+
+.bannerSec .center-wrap .leftbtn:hover, 
+.bannerSec .center-wrap .rightbtn:hover {
+    opacity: 0.5;
+}
+
+.bannerSec .center-wrap .banner-nav {
+    height: 100%;
+}
+
+.bannerSec .center-wrap .banner-nav > ul {
+    height: 100%;
+}
+
+.bannerSec .center-wrap .banner-nav > ul > li {
+    width: 296px;
+    height: 16.66%;
+    /* background-image: linear-gradient(rgba(255, 0, 0, 0.592), rgba(0, 0, 255, 0.428)); */
+    opacity: 0.5;
+    background: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    /* padding-left: 42px; */
+    position: relative;
+}
+
+.bannerSec .center-wrap .banner-nav > ul > li:last-child {
+    border-bottom: none;
+}
+
+.bannerSec .center-wrap .banner-nav > ul > li dl{
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: 42px;
+}
+.bannerSec .center-wrap .banner-nav > ul > li dl dt {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 26px;
+}
+
+.bannerSec .center-wrap .banner-nav > ul > li em {
+    font-size: 14px;
+    color: #FFFFFF;
+    /* text-align: justify; */
+    line-height: 22px;
+    height: 22px;
+}
+
+.bannerSec .center-wrap .menuAll {
+    position: absolute;
+    left: 296px;
+    top: 0;
+    width: 324px;
+    height: 100%;
+    background-color: rgba(28, 31, 33, 0.7);
+}
+
+.bannerSec .center-wrap .menuAll dl {
+    height: 100%;
+    padding: 16px;
+}
+
+.bannerSec .center-wrap .menuAll dt {
+    font-size: 16px;
+    color: #FFFFFF;
+    /* text-align: justify; */
+    line-height: 24px;
+    
+}
+
+.bannerSec .center-wrap .menuAll dd a {
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+.smallAds {
+    margin: 32px 0;
+}
+
+.smallAds ul li {
+    float: left;
+    width: 264px;
+    height: 110px;
+    margin-right: 32px;
+}
+
+.smallAds ul li:last-child {
+    margin-right: 0;
+}
+
+.xxsw {
+    background: #F7F7F7;
+    width: 100%;
+    /* min-width: 1152px;已在body里设定 */
+    height: 738px;
+}
+
+.xxsw .center-wrap .head h2 {
+    font-size: 36px;
+    color: #1C1F21;
+    /* text-align: justify; */
+    line-height: 54px;
+    font-weight: bold;
+    float: left;
+}
+
+.xxsw .center-wrap .head em {
+    font-size: 12px;
+    color: #1C1F21;
+    text-align: justify;
+    line-height: 18px;
+    margin-left: 12px;
+    position: relative;
+    top: 20px;
+}
+
+.xxsw .center-wrap ul li {
+    float: left;
+    width: 264px;
+    height: 270px;
+    margin-right: 32px;
+    margin-top: 32px;
+    background: #FFFFFF;
+}
+
+.xxsw .center-wrap ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.xxsw .center-wrap ul li a .picsBox {
+    width: 264px;
+    height: 184px;
+}
+
+.xxsw .center-wrap ul li a .textBox {
+    width: 236px;
+    height: 44px;
+    font-size: 14px;
+    color: #1C1F21;
+    line-height: 22px;
+    margin: 20px 14px 22px 14px;
+}
+
+
+.jjfree {
+    height: 738px;
+}
+
+.jjfree .top-jj h2, .jjfree .top-jj em {
+    float: left;
+}
+
+.jjfree .top-jj > ul {
+    float: right;
+}
+
+.jjfree .top-jj > ul > li {
+    float: left;
+    font-size: 14px;
+    color: rgba(0,0,0,0.85);
+    text-align: center;
+    line-height: 22px;
+    margin-right: 14px;
+    padding-top: 52px;
+}
+
+.jjfree .top-jj > ul > li:last-child {
+    margin-right: 0;
+}
+
+.jjfree .top-jj h2 {
+    font-size: 36px;
+    color: #000000;
+    text-align: justify;
+    line-height: 54px;
+    font-weight: bold;
+    padding: 40px 0 32px;
+}
+
+.jjfree .top-jj em {
+    font-size: 12px;
+    color: #000000;
+    text-align: justify;
+    line-height: 18px;
+    padding-top: 67px;
+    padding-left: 12px;
+}
+
+.jjfree .bottom-jj > ul > li {
+    width: 264px;
+    height: 270px;
+    float: left;
+    /* background-color: orange; */
+    margin-bottom: 32px;
+    margin-right: 32px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.20);
+}
+
+.jjfree .bottom-jj > ul > li:nth-child(3),
+.jjfree .bottom-jj > ul > li:nth-child(7) {
+    margin-right: 0;
+}
+
+.jjfree .bottom-jj > ul > li.bigGrid {
+    width: 560px;
+    position: relative;
+}
+
+.jjfree .bottom-jj > ul > li.bigGrid .info {
+    position: absolute;
+    width: 560px;
+    height: 103px;
+    background: rgba(28, 31, 33, 0.55);
+    bottom: 0;
+    left: 0;
+    color: #FFFFFF;
+    /* text-align: center; */
+    padding: 30px 26px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.jjfree .bottom-jj > ul > li  div.textBox {
+    margin: 20px 14px;
+    width: 236px;
+    height: 44px;
+}
+
+.jjfree .bottom-jj > ul > li > a {
+    font-size: 14px;
+    color: #1C1F21;
+    line-height: 22px;
+}
+
+.jjfree .bottom-jj > ul > li.moreGrid {
+    background-image: linear-gradient(180deg, #34E3BC 0%, #15AF7A 98%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+    font-size: 14px;
+}
+
+.jjfree .bottom-jj > ul > li.moreGrid a {
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 22px;
+}
+
+.jjfree .bottom-jj > ul > li.moreGrid a p.iconfont {
+    font-size: 48px;
+    line-height: 48px;
+    margin-bottom: 36px;
+    margin-top: 28px;
+}
+
+.jjfree .bottom-jj > ul > li.moreGrid a p.moreR1 {
+    margin-top: 46px;
+}
+
+.localSpe-image-link {
+    text-decoration: none;
+}
+.in-depth {
+    background: #F7F7F7;
+}
+
+.in-depth .bottom-jj > ul > li.moreGrid {
+    background-image: linear-gradient(180deg, #BD5EE8 0%, #832ABB 98%);
+}
+
+.groupTour .bottom-jj > ul > li.moreGrid {
+    background-image: linear-gradient(180deg, #41D8E9 0%, #3685EA 98%);
+}
