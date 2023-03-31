@@ -259,7 +259,7 @@ body {
 
 
 .bannerSec {
-    position: relative;
+    position: absolute;
 }
 
 .bannerSec .banner1 {
