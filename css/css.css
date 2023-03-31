@@ -264,6 +264,7 @@ body {
 
 .bannerSec .banner1 {
     width: 100%;
+    height: auto;
     min-width: 1152px;
     vertical-align: middle;
 }
